@@ -8,7 +8,7 @@ public class KauhaTesti : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-	
+        Screen.lockCursor = true;
 	}
 	
 	// Update is called once per frame
@@ -19,21 +19,42 @@ public class KauhaTesti : MonoBehaviour
 
     void FixedUpdate()
     {
+        rigidbody.velocity = new Vector3();
+
+        Vector3 movement = new Vector3(0.0f,0.0f,0.0f);
         //rigidbody.AddForce(0, Input.GetAxis("Fire1"), 0, ForceMode.Impulse); //Input.GetAxis("Mouse ScrollWheel");
+
+
         if (Input.GetButton("Fire1"))
         {
-            rigidbody.MovePosition(new Vector3(transform.position.x, transform.position.y + speed.y * Time.deltaTime, transform.position.z));
+            movement.y += speed.y;
         }
 
-        else if (Input.GetButton("Fire2"))
+        if (Input.GetButton("Fire2"))
         {
-            rigidbody.MovePosition(new Vector3(transform.position.x, transform.position.y - speed.y * Time.deltaTime, transform.position.z));
+            movement.y -= speed.y;
         }
-        else
-        {
-            rigidbody.MovePosition(new Vector3(transform.position.x + Input.GetAxis("Mouse X") * speed.x * Time.deltaTime, 
-                transform.position.y, 
-                transform.position.z + Input.GetAxis("Mouse Y") * speed.x * Time.deltaTime));       
-        }
+
+        movement.x += Input.GetAxis("Mouse X") * speed.x;
+        movement.z += Input.GetAxis("Mouse Y") * speed.x;
+
+        rigidbody.AddForce(movement,ForceMode.VelocityChange);
+        
+
+        //if (Input.GetButton("Fire1"))
+        //{
+        //    rigidbody.MovePosition(new Vector3(transform.position.x, transform.position.y + speed.y * Time.deltaTime, transform.position.z));
+        //}
+
+        //else if (Input.GetButton("Fire2"))
+        //{
+        //    rigidbody.MovePosition(new Vector3(transform.position.x, transform.position.y - speed.y * Time.deltaTime, transform.position.z));
+        //}
+        
+        //{
+        //    rigidbody.MovePosition(new Vector3(transform.position.x + Input.GetAxis("Mouse X") * speed.x * Time.deltaTime, 
+        //        transform.position.y, 
+        //        transform.position.z + Input.GetAxis("Mouse Y") * speed.x * Time.deltaTime));       
+        //}
     }
 }
