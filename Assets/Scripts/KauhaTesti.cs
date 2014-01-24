@@ -3,6 +3,7 @@ using System.Collections;
 
 public class KauhaTesti : MonoBehaviour
 {
+    public float speed;
 
 	// Use this for initialization
 	void Start ()
@@ -21,12 +22,12 @@ public class KauhaTesti : MonoBehaviour
         //rigidbody.AddForce(0, Input.GetAxis("Fire1"), 0, ForceMode.Impulse); //Input.GetAxis("Mouse ScrollWheel");
         if (Input.GetButton("Fire1"))
         {
-            rigidbody.MovePosition(new Vector3(transform.position.x, transform.position.y + 1 * Time.deltaTime, transform.position.z));
+            rigidbody.MovePosition(new Vector3(transform.position.x, transform.position.y + speed * Time.deltaTime, transform.position.z));
         }
 
-        else if (Input.GetButton("Fire1"))
+        else if (Input.GetButton("Fire2"))
         {
-            rigidbody.MovePosition(new Vector3(transform.position.x, transform.position.y + 1 * Time.deltaTime, transform.position.z));
+            rigidbody.MovePosition(new Vector3(transform.position.x, transform.position.y - speed * Time.deltaTime, transform.position.z));
         }
     }
 }
