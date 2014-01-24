@@ -29,5 +29,11 @@ public class KauhaTesti : MonoBehaviour
         {
             rigidbody.MovePosition(new Vector3(transform.position.x, transform.position.y - speed * Time.deltaTime, transform.position.z));
         }
+        else
+        {
+            rigidbody.MovePosition(new Vector3(transform.position.x + Input.GetAxis("Mouse X") * speed * Time.deltaTime, 
+                transform.position.y, 
+                transform.position.z + Input.GetAxis("Mouse Y") * speed * Time.deltaTime));       
+        }
     }
 }
