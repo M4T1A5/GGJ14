@@ -2,6 +2,7 @@
 # Unity gitignore
 ##########################
 
+[Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
 
