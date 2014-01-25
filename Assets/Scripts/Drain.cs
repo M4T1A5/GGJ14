@@ -3,9 +3,11 @@ using System.Collections;
 
 public class Drain : MonoBehaviour
 {
-
     void OnTriggerEnter(Collider other)
     {
-        Destroy(other.gameObject);
+        if (other.gameObject.tag == "Water")
+        {
+            Destroy(other.gameObject);
+        }
     }
 }
