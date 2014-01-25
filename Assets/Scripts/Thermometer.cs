@@ -4,6 +4,7 @@ using System.Collections;
 public class Thermometer : MonoBehaviour
 {
     public float startHeat;
+    public float heatDissipationSpeed = 1;
 
     private float heat;
     public float Heat
@@ -25,7 +26,7 @@ public class Thermometer : MonoBehaviour
 	void Update ()
     {
         turnToHeat(heat);
-        heat -= Time.deltaTime;
+        heat -= Time.deltaTime * heatDissipationSpeed;
 	}
 
     void turnToHeat(float heat)
