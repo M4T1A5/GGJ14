@@ -13,8 +13,11 @@ public class PisaraKiuasHit : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        hits++;
-        Destroy(other.gameObject);
+        if (other.tag == "Water")
+        {
+            hits++;
+            Destroy(other.gameObject);
+        }
     }
 
     void OnGUI()
