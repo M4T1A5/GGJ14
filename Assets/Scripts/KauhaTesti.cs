@@ -1,9 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[System.Serializable]
+public class KauhaAttributes
+{
+    public float pitch;
+    public float yaw;
+    public float roll;
+    public float forward;
+    public float vertical;
+}
+
+
 public class KauhaTesti : MonoBehaviour
 {
-    public Vector2 speed;
+    public KauhaAttributes attributes;
 
     private float wantedAngle;
 
@@ -33,12 +44,12 @@ public class KauhaTesti : MonoBehaviour
 
         if (Input.GetButton("Fire1"))
         {
-            movement.y += speed.y;
+            movement.y += attributes.vertical;
         }
 
         if (Input.GetButton("Fire2"))
         {
-            movement.y -= speed.y;
+            movement.y -= attributes.vertical;
         }
 
         if (Input.GetButton("Fire3"))
@@ -48,13 +59,13 @@ public class KauhaTesti : MonoBehaviour
         }
 
         wantedAngle *= 0.9f;
-        wantedAngle += Input.GetAxis("Mouse ScrollWheel") * speed.y;
+        wantedAngle += Input.GetAxis("Mouse ScrollWheel") * attributes.pitch;
         torque.x += wantedAngle;
 
-        
 
-        movement.x += Input.GetAxis("Mouse X") * speed.x;
-        movement.z += Input.GetAxis("Mouse Y") * speed.x;
+
+        movement.x += Input.GetAxis("Mouse X") * attributes.yaw;
+        movement.z += Input.GetAxis("Mouse Y") * attributes.forward;
 
         //if (torque.sqrMagnitude < 1)
         //{         
