@@ -3143,6 +3143,10 @@ Prefab:
       propertyPath: m_Name
       value: Kauha
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 70f73d50a60b0044bae815829346c60b, type: 2}
+      propertyPath: kauha
+      value: 
+      objectReference: {fileID: 172210392}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 70f73d50a60b0044bae815829346c60b, type: 2}
   m_RootGameObject: {fileID: 1985760923}
@@ -4538,7 +4542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cdb8125b92e6c248a0250b963b9b480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObject: {fileID: 400000, guid: c5aa667f92aadd04c9ba6d84a7fdebec, type: 2}
+  objectToSpawn: {fileID: 400000, guid: c5aa667f92aadd04c9ba6d84a7fdebec, type: 2}
   containerObject: {fileID: 1760150751}
   spawnInterval: .100000001
 --- !u!1 &1891873962
@@ -4870,7 +4874,7 @@ MonoBehaviour:
     roll: 10
     forward: 10
     vertical: 5
-  kauha: {fileID: 0}
+  kauha: {fileID: 172210392}
 --- !u!1 &2028589669
 GameObject:
   m_ObjectHideFlags: 0

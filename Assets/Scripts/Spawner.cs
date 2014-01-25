@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Spawner : MonoBehaviour
 {
-    public Transform gameObject;
+    public Transform objectToSpawn;
     public Transform containerObject;
     public float spawnInterval;
 
@@ -16,7 +16,7 @@ public class Spawner : MonoBehaviour
 	// Update is called once per frame
 	void Spawn()
     {
-        var go = (Transform)Instantiate(gameObject, transform.position, transform.rotation);
+        var go = (Transform)Instantiate(objectToSpawn, transform.position, transform.rotation);
         go.transform.parent = containerObject;
 	}
 }

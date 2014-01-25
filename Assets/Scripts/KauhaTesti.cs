@@ -19,6 +19,7 @@ public class KauhaTesti : MonoBehaviour
 
     private float wantedPitch;
     private float wantedRoll;
+    private float currentRoll;
 
 	// Use this for initialization
 	void Start ()
@@ -26,6 +27,7 @@ public class KauhaTesti : MonoBehaviour
         Screen.lockCursor = true;
         wantedPitch = 0;
         wantedRoll = 0;
+        currentRoll = 0;
 	}
 	
 	// Update is called once per frame
@@ -57,10 +59,17 @@ public class KauhaTesti : MonoBehaviour
 
         if (Input.GetButton("Fire3"))
         {
-            wantedRoll = 150;
-            //torque.y += Input.GetAxis("Mouse Y") * speed.x;
-            //torque.x += Input.GetAxis("Mouse X") * speed.x;
+            wantedRoll -= attributes.roll * 0.01f;
         }
+        else
+        {
+            wantedRoll += attributes.roll * 0.01f;
+            //kauha.transform.localRotation = Quaternion.identity;
+        }
+        wantedRoll = Mathf.Clamp(wantedRoll, -2, 0);
+        currentRoll = 0.9f * currentRoll + 0.1f * wantedRoll;
+        kauha.transform.localRotation = new Quaternion(currentRoll, 0, 0, 1);
+
 
         wantedPitch *= 0.9f;
         wantedPitch += Input.GetAxis("Mouse ScrollWheel") * attributes.pitch;
