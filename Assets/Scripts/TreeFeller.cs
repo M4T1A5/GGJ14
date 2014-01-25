@@ -24,12 +24,18 @@ public class TreeFeller : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        if (health <= 0)
+            return;
+
         if (coolDownTimer <= 0)
         {
-            animation.Play();
             health -= damage;
+            if (health <= 0)
+                animation.clip = animation.GetClip("TreeFell");
+
+            animation.Play();
             coolDownTimer = coolDownTime;
-		 }       
+        }
     }
 
     void OnGUI()
