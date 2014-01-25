@@ -11,18 +11,21 @@ public class KauhaAttributes
     public float vertical;
 }
 
-
 public class KauhaTesti : MonoBehaviour
 {
     public KauhaAttributes attributes;
 
-    private float wantedAngle;
+    public GameObject kauha;
+
+    private float wantedPitch;
+    private float wantedRoll;
 
 	// Use this for initialization
 	void Start ()
     {
         Screen.lockCursor = true;
-        wantedAngle = 0;
+        wantedPitch = 0;
+        wantedRoll = 0;
 	}
 	
 	// Update is called once per frame
@@ -54,13 +57,14 @@ public class KauhaTesti : MonoBehaviour
 
         if (Input.GetButton("Fire3"))
         {
+            wantedRoll = 150;
             //torque.y += Input.GetAxis("Mouse Y") * speed.x;
             //torque.x += Input.GetAxis("Mouse X") * speed.x;
         }
 
-        wantedAngle *= 0.9f;
-        wantedAngle += Input.GetAxis("Mouse ScrollWheel") * attributes.pitch;
-        torque.x += wantedAngle;
+        wantedPitch *= 0.9f;
+        wantedPitch += Input.GetAxis("Mouse ScrollWheel") * attributes.pitch;
+        torque.x += wantedPitch;
 
 
 
