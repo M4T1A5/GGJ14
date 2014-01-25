@@ -1,20 +1,13 @@
 fileFormatVersion: 2
-guid: dffeff82a23a8f143b90366a7d2ee705
+guid: db91e15ecb502254080d271aa91cee68
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
-    100000: Door
-    100002: Room
-    100004: //RootNode
-    400000: Door
-    400002: Room
-    400004: //RootNode
-    2300000: Door
-    2300002: Room
-    3300000: Door
-    3300002: Room
-    4300000: Door
-    4300002: Room
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Kivi
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -33,7 +26,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: .5
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1

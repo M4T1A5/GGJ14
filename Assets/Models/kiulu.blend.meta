@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3dc8705aa34f20543bda1ce544970da2
+guid: 89e3e4f1b91285742a97192cedb975e6
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
@@ -7,7 +7,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Kiuas
+    4300000: Kiulu
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -40,9 +40,9 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
   tangentSpace:
-    normalSmoothAngle: 60
+    normalSmoothAngle: 15
     splitTangentsAcrossUV: 1
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0
