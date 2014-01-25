@@ -21,6 +21,9 @@ public class KauhaTesti : MonoBehaviour
     private float wantedRoll;
     private float currentRoll;
     private float wantedVertical;
+    private float wantedHorizontal;
+    private float wantedForward;
+
 
 	// Use this for initialization
 	void Start ()
@@ -30,6 +33,8 @@ public class KauhaTesti : MonoBehaviour
         wantedRoll = 0;
         currentRoll = 0;
         wantedVertical = transform.localPosition.y;
+        wantedHorizontal = transform.localPosition.x;
+        wantedForward = transform.localPosition.z;
 	}
 	
 	// Update is called once per frame
@@ -41,55 +46,45 @@ public class KauhaTesti : MonoBehaviour
 
     void FixedUpdate()
     {
-
         rigidbody.angularVelocity = new Vector3();
         rigidbody.velocity = new Vector3();
-
         Vector3 movement = new Vector3(0.0f, 0.0f, 0.0f);
         Vector3 torque = new Vector3(0.0f, 0.0f, 0.0f);
-        //rigidbody.AddForce(0, Input.GetAxis("Fire1"), 0, ForceMode.Impulse); //Input.GetAxis("Mouse ScrollWheel");
 
+        // LEFT - RIGHT
+        wantedHorizontal += Input.GetAxis("Mouse X") * attributes.yaw;
+        wantedHorizontal *= 0.5f;
+        movement.x = wantedHorizontal;
 
+        // FORWARD - BACKWARD
+        wantedForward += Input.GetAxis("Mouse Y") * attributes.forward;
+        wantedForward *= 0.5f;
+        movement.z = wantedForward;
+
+        // UP - DOWN
         if (Input.GetButton("Fire1"))
-        {
             wantedVertical += attributes.vertical * 0.1f;
-        }
-
         if (Input.GetButton("Fire2"))
-        {
             wantedVertical -= attributes.vertical * 0.1f;
-        }
         wantedVertical *= 0.9f;
         movement.y = wantedVertical;
 
+         // ROLL - DON'T ROLL
         if (Input.GetButton("Fire3"))
-        {
             wantedRoll -= attributes.roll * 0.01f;
-        }
         else
-        {
             wantedRoll += attributes.roll * 0.01f;
-            //kauha.transform.localRotation = Quaternion.identity;
-        }
         wantedRoll = Mathf.Clamp(wantedRoll, -2, 0);
         currentRoll = 0.9f * currentRoll + 0.1f * wantedRoll;
         kauha.transform.localRotation = new Quaternion(currentRoll, 0, 0, 1);
 
-
-        wantedPitch *= 0.9f;
+        // TURN UP - TURN DOWN
         wantedPitch += Input.GetAxis("Mouse ScrollWheel") * attributes.pitch;
+        wantedPitch *= 0.9f;
         torque.x += wantedPitch;
 
 
-
-        movement.x += Input.GetAxis("Mouse X") * attributes.yaw;
-        movement.z += Input.GetAxis("Mouse Y") * attributes.forward;
-
-        //if (torque.sqrMagnitude < 1)
-        //{         
-        //}
-        rigidbody.AddForce(movement, ForceMode.VelocityChange);   
-
+        rigidbody.AddForce(movement, ForceMode.VelocityChange);
         rigidbody.AddTorque(torque, ForceMode.VelocityChange);
     }
 }
