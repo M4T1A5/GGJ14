@@ -20,6 +20,7 @@ public class KauhaTesti : MonoBehaviour
     private float wantedPitch;
     private float wantedRoll;
     private float currentRoll;
+    private float wantedVertical;
 
 	// Use this for initialization
 	void Start ()
@@ -28,11 +29,13 @@ public class KauhaTesti : MonoBehaviour
         wantedPitch = 0;
         wantedRoll = 0;
         currentRoll = 0;
+        wantedVertical = transform.localPosition.y;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
+        Screen.lockCursor = true;
         //transform.position = new Vector3(transform.position.x, transform.position.y + Input.GetAxis("Mouse ScrollWheel") * 50 * Time.deltaTime, transform.position.z);
 	}
 
@@ -49,13 +52,15 @@ public class KauhaTesti : MonoBehaviour
 
         if (Input.GetButton("Fire1"))
         {
-            movement.y += attributes.vertical;
+            wantedVertical += attributes.vertical * 0.1f;
         }
 
         if (Input.GetButton("Fire2"))
         {
-            movement.y -= attributes.vertical;
+            wantedVertical -= attributes.vertical * 0.1f;
         }
+        wantedVertical *= 0.9f;
+        movement.y = wantedVertical;
 
         if (Input.GetButton("Fire3"))
         {
