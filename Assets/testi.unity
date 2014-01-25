@@ -5574,6 +5574,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: {fileID: 255998145}
   steamEmitter: {fileID: 967834806}
+  soundEmmitter: {fileID: 0}
 --- !u!65 &1828602168
 BoxCollider:
   m_ObjectHideFlags: 0
