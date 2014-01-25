@@ -1,20 +1,13 @@
 fileFormatVersion: 2
-guid: d765ada4dac4f014f86e6c17c6c6d798
+guid: 143fb95057eb52e4ea9fbdb070056802
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
-    100000: Kauha
-    100002: //RootNode
-    100004: KauhaCollider
-    400000: Kauha
-    400002: //RootNode
-    400004: KauhaCollider
-    2300000: Kauha
-    2300002: KauhaCollider
-    3300000: Kauha
-    3300002: KauhaCollider
-    4300000: KauhaCollider
-    4300002: Kauha
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Kauha
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -47,7 +40,7 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
   tangentSpace:
-    normalSmoothAngle: 0
+    normalSmoothAngle: 30
     splitTangentsAcrossUV: 1
     normalImportMode: 1
     tangentImportMode: 1
