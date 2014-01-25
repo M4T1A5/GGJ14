@@ -19,9 +19,12 @@ public class KauhaTesti : MonoBehaviour
 
     void FixedUpdate()
     {
+
+        rigidbody.angularVelocity = new Vector3();
         rigidbody.velocity = new Vector3();
 
-        Vector3 movement = new Vector3(0.0f,0.0f,0.0f);
+        Vector3 movement = new Vector3(0.0f, 0.0f, 0.0f);
+        Vector3 torque = new Vector3(0.0f, 0.0f, 0.0f);
         //rigidbody.AddForce(0, Input.GetAxis("Fire1"), 0, ForceMode.Impulse); //Input.GetAxis("Mouse ScrollWheel");
 
 
@@ -35,10 +38,21 @@ public class KauhaTesti : MonoBehaviour
             movement.y -= speed.y;
         }
 
+        if (Input.GetButton("Fire3"))
+        {
+            torque.y += Input.GetAxis("Mouse Y") * speed.x;
+            torque.x += Input.GetAxis("Mouse X") * speed.x;
+        }
+
         movement.x += Input.GetAxis("Mouse X") * speed.x;
         movement.z += Input.GetAxis("Mouse Y") * speed.x;
 
-        rigidbody.AddForce(movement,ForceMode.VelocityChange);
+        if (torque.sqrMagnitude < 1)
+        {
+            rigidbody.AddForce(movement, ForceMode.VelocityChange);            
+        }
+
+        rigidbody.AddRelativeTorque(torque, ForceMode.VelocityChange);
         
 
         //if (Input.GetButton("Fire1"))
