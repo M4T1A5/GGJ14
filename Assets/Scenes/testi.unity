@@ -501,7 +501,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ae0bb6dfcbb6d5e4f840024710816d98, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 19.5662899
+      value: 23.7241764
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ae0bb6dfcbb6d5e4f840024710816d98, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1954,7 +1954,7 @@ Transform:
   m_PrefabInternal: {fileID: 129158017}
   m_GameObject: {fileID: 848886806}
   m_LocalRotation: {x: -.707106888, y: 0, z: -0, w: .707106769}
-  m_LocalPosition: {x: 14.3513832, y: 19.5662899, z: -25.5861073}
+  m_LocalPosition: {x: 14.3513832, y: 23.7241764, z: -25.5861073}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1877314912}
@@ -2731,8 +2731,8 @@ Transform:
   m_PrefabInternal: {fileID: 2121881534}
   m_GameObject: {fileID: 1328303069}
   m_LocalRotation: {x: -.707106888, y: 0, z: -0, w: .707106769}
-  m_LocalPosition: {x: 6.2889452, y: 12.2255669, z: -13.1563206}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 7.6562624, y: 12.2255669, z: -15.0129108}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 471809474}
   - {fileID: 1828602166}
@@ -3386,7 +3386,7 @@ MonoBehaviour:
   score: {fileID: 255998145}
   steamEmitter: {fileID: 19800000, guid: 4c2f0fcf4d96935468bb656ba35c025f, type: 2}
   soundEmmitter: {fileID: 100000, guid: 59f8aeaa0b8559b47aaa861fe989f3f7, type: 2}
-  heatGainSpeed: 1
+  heatGainSpeed: .5
 --- !u!65 &1828602168
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3918,8 +3918,8 @@ Transform:
   m_LocalScale: {x: 1.32265091, y: 1.32265091, z: 1.32265079}
   m_Children:
   - {fileID: 229929589}
-  - {fileID: 317679474}
   - {fileID: 838651339}
+  - {fileID: 317679474}
   m_Father: {fileID: 812255428}
 --- !u!167 &2032136846
 AudioReverbZone:
@@ -4023,7 +4023,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 82393056a8f6f214cacc5677166397b1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 6.2889452
+      value: 7.6562624
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 82393056a8f6f214cacc5677166397b1, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4031,7 +4031,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 82393056a8f6f214cacc5677166397b1, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -13.1563206
+      value: -15.0129108
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 82393056a8f6f214cacc5677166397b1, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4053,6 +4053,22 @@ Prefab:
       propertyPath: score
       value: 
       objectReference: {fileID: 255998145}
+    - target: {fileID: 400000, guid: 82393056a8f6f214cacc5677166397b1, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 82393056a8f6f214cacc5677166397b1, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 82393056a8f6f214cacc5677166397b1, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400054, guid: 82393056a8f6f214cacc5677166397b1, type: 2}
+      propertyPath: heatGainSpeed
+      value: .5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 82393056a8f6f214cacc5677166397b1, type: 2}
   m_RootGameObject: {fileID: 1328303069}
