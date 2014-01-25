@@ -6,11 +6,15 @@ public class PisaraKiuasHit : MonoBehaviour
     public GUIText score;
     public ParticleSystem steamEmitter;
     public GameObject soundEmmitter;
+
+    private Thermometer thermometer;
+
     private int hits;
 
     void Start()
     {
         hits = 0;
+        thermometer = GameObject.Find("Viisari").GetComponent<Thermometer>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -18,6 +22,8 @@ public class PisaraKiuasHit : MonoBehaviour
         if (other.tag == "Water")
         {
             hits++;
+
+            thermometer.Heat++;
 
             var steam = (ParticleSystem)Instantiate(steamEmitter, other.transform.position, steamEmitter.transform.rotation);
             var tshhh = (GameObject)Instantiate(soundEmmitter, other.transform.position, soundEmmitter.transform.rotation);
