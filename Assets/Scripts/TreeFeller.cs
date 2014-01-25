@@ -10,16 +10,26 @@ public class TreeFeller : MonoBehaviour
 
     private float coolDownTimer = 0;
     private Animation animation;
+    private GameObject saunaContainer;
 
 	// Use this for initialization
 	void Start()
     {
         animation = GetComponent<Animation>();
+        saunaContainer = OutOfWood.SaunaContainer;
 	}
 
     void Update()
     {
         coolDownTimer -= Time.deltaTime;
+
+        if (animation.clip.name == "TreeFell" && !animation.isPlaying)
+        {
+            var go = GameObject.Find("PuunHakkausContainer");
+            go.SetActive(false);
+            saunaContainer.SetActive(true);
+            Destroy(go);
+        }
     }
 
     void OnTriggerEnter(Collider other)
