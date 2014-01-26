@@ -2831,8 +2831,8 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 82393056a8f6f214cacc5677166397b1, type: 2}
   m_PrefabInternal: {fileID: 2121881534}
   m_GameObject: {fileID: 1328303069}
-  m_LocalRotation: {x: -.707106888, y: 0, z: -0, w: .707106769}
-  m_LocalPosition: {x: 7.6562624, y: 13.7109776, z: -15.0129118}
+  m_LocalRotation: {x: .5, y: .5, z: .5, w: -.5}
+  m_LocalPosition: {x: 9.30299473, y: 13.7109776, z: -14.0638781}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 471809474}
@@ -4222,7 +4222,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 82393056a8f6f214cacc5677166397b1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 7.6562624
+      value: 9.30299473
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 82393056a8f6f214cacc5677166397b1, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4230,23 +4230,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 82393056a8f6f214cacc5677166397b1, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -15.0129118
+      value: -14.0638781
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 82393056a8f6f214cacc5677166397b1, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -.707106888
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 82393056a8f6f214cacc5677166397b1, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 82393056a8f6f214cacc5677166397b1, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 82393056a8f6f214cacc5677166397b1, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .707106769
+      value: -.5
       objectReference: {fileID: 0}
     - target: {fileID: 11400054, guid: 82393056a8f6f214cacc5677166397b1, type: 2}
       propertyPath: score
