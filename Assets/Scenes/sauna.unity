@@ -3271,7 +3271,7 @@ MeshCollider:
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: 90f54b8bd8656e74e927247f9084b804, type: 3}
+  m_Mesh: {fileID: 4300000, guid: cae89037ea307f94aa77bfd8c25f9bbb, type: 3}
 --- !u!65 &1328303071
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3312,7 +3312,7 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 809448432}
   m_GameObject: {fileID: 1328303069}
-  m_Mesh: {fileID: 4300000, guid: ebb112c36db00954c9901a5448b888b6, type: 3}
+  m_Mesh: {fileID: 4300000, guid: cae89037ea307f94aa77bfd8c25f9bbb, type: 3}
 --- !u!4 &1328303074
 Transform:
   m_ObjectHideFlags: 0
