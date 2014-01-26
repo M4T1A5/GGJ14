@@ -2000,6 +2000,22 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 1.91090422e-07
       objectReference: {fileID: 0}
+    - target: {fileID: 11400040, guid: 82393056a8f6f214cacc5677166397b1, type: 2}
+      propertyPath: thermometerObject
+      value: 
+      objectReference: {fileID: 1722451889}
+    - target: {fileID: 11400040, guid: 82393056a8f6f214cacc5677166397b1, type: 2}
+      propertyPath: youlose
+      value: 
+      objectReference: {fileID: 100000, guid: 839725e65a9392048b48c8307a431b03, type: 2}
+    - target: {fileID: 11400040, guid: 82393056a8f6f214cacc5677166397b1, type: 2}
+      propertyPath: lives
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400040, guid: 82393056a8f6f214cacc5677166397b1, type: 2}
+      propertyPath: transition
+      value: 
+      objectReference: {fileID: 100000, guid: 3c1ec822ae20d334fa4d1889e5e43e10, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 82393056a8f6f214cacc5677166397b1, type: 2}
   m_RootGameObject: {fileID: 1328303069}
@@ -3399,6 +3415,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65f04ef73f7b54342acececee78638ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transition: {fileID: 100000, guid: 3c1ec822ae20d334fa4d1889e5e43e10, type: 2}
+  youlose: {fileID: 100000, guid: 839725e65a9392048b48c8307a431b03, type: 2}
+  lives: 3
 --- !u!82 &1328303076
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4137,8 +4156,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHeat: 60
-  heatDissipationSpeed: .300000012
-  youlose: {fileID: 100000, guid: 839725e65a9392048b48c8307a431b03, type: 2}
+  heatDissipationSpeed: 10
+  kiuas: {fileID: 1328303069}
+  youWin: {fileID: 100000, guid: 8311aa611f3cf5d4998d8e367b8b8b48, type: 2}
 --- !u!1 &1723641115
 GameObject:
   m_ObjectHideFlags: 0
