@@ -13,7 +13,7 @@ public class Thermometer : MonoBehaviour
     public float Heat
     {
         get { return heat; }
-        set { heat = Mathf.Clamp(value, 20, 140); }
+        set { heat = Mathf.Clamp(value, 19, 141); }
     }
 
     private Quaternion startRotation;
@@ -30,7 +30,7 @@ public class Thermometer : MonoBehaviour
 	void Update ()
     {
         turnToHeat(heat);
-        Heat -= Time.deltaTime * heatDissipationSpeed;
+        Heat -= Time.deltaTime * heatDissipationSpeed *(1 + (Input.GetKey(KeyCode.Space) ? 1 : 0) * 10);
 
         if (heat <= 20)
         {

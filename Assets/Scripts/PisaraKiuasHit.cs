@@ -25,7 +25,7 @@ public class PisaraKiuasHit : MonoBehaviour
         {
             hits++;
 
-            thermometer.Heat += heatGainSpeed;
+            thermometer.Heat += heatGainSpeed *(1 + (Input.GetKey(KeyCode.LeftShift) ? 1 : 0) * 10);
 
             var steam = (GameObject)Instantiate(steamEmitter, other.transform.position, steamEmitter.transform.rotation);
             var tshhh = (GameObject)Instantiate(soundEmmitter, other.transform.position, soundEmmitter.transform.rotation);
