@@ -344,10 +344,6 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: .707106769
       objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: ae0bb6dfcbb6d5e4f840024710816d98, type: 2}
-      propertyPath: containerObject
-      value: 
-      objectReference: {fileID: 1760150751}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae0bb6dfcbb6d5e4f840024710816d98, type: 2}
   m_RootGameObject: {fileID: 848886806}
@@ -851,7 +847,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!132 &255998145
 GUIText:
   m_ObjectHideFlags: 0
@@ -5075,7 +5071,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHeat: 60
-  heatDissipationSpeed: .300000012
+  heatDissipationSpeed: 0
+  youlose: {fileID: 100000, guid: 839725e65a9392048b48c8307a431b03, type: 2}
 --- !u!1 &1723641115
 GameObject:
   m_ObjectHideFlags: 0
@@ -5435,7 +5432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 400000, guid: c5aa667f92aadd04c9ba6d84a7fdebec, type: 2}
-  containerObject: {fileID: 1760150751}
+  containerObject: {fileID: 0}
   spawnInterval: .100000001
 --- !u!1001 &1880680456
 Prefab:

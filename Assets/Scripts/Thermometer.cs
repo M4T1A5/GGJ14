@@ -6,6 +6,8 @@ public class Thermometer : MonoBehaviour
     public float startHeat;
     public float heatDissipationSpeed = 1;
 
+    public GameObject youlose;
+
     private float heat;
     public float Heat
     {
@@ -27,6 +29,14 @@ public class Thermometer : MonoBehaviour
     {
         turnToHeat(heat);
         Heat -= Time.deltaTime * heatDissipationSpeed;
+
+        if (heat <= 20)
+        {
+            var go = (GameObject)Instantiate(youlose);
+            Destroy(go, 5.0f);
+            enabled = false;
+        }
+
 	}
 
     void turnToHeat(float heat)
