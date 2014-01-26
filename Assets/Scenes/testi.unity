@@ -3543,7 +3543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 255998145}
-  steamEmitter: {fileID: 19800000, guid: 4c2f0fcf4d96935468bb656ba35c025f, type: 2}
+  steamEmitter: {fileID: 100000, guid: 4c2f0fcf4d96935468bb656ba35c025f, type: 2}
   soundEmmitter: {fileID: 100000, guid: 59f8aeaa0b8559b47aaa861fe989f3f7, type: 2}
   heatGainSpeed: .5
 --- !u!65 &1828602168
@@ -4268,6 +4268,10 @@ Prefab:
       propertyPath: heatGainSpeed
       value: .5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400054, guid: 82393056a8f6f214cacc5677166397b1, type: 2}
+      propertyPath: steamEmitter
+      value: 
+      objectReference: {fileID: 100000, guid: 4c2f0fcf4d96935468bb656ba35c025f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 82393056a8f6f214cacc5677166397b1, type: 2}
   m_RootGameObject: {fileID: 1328303069}

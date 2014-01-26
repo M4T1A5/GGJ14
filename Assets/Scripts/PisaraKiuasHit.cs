@@ -31,7 +31,7 @@ public class PisaraKiuasHit : MonoBehaviour
             var tshhh = (GameObject)Instantiate(soundEmmitter, other.transform.position, soundEmmitter.transform.rotation);
             tshhh.GetComponent<AudioSource>().Play();
             Destroy(other.gameObject);
-            Destroy(steam, 10.0f);
+            Destroy(steam, 7.0f);
             Destroy(tshhh, 5.0f);
         }
     }
