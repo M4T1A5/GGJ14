@@ -11,9 +11,12 @@ public class OutOfWood : MonoBehaviour
     public void HitSomeTrees(Thermometer thermometer)
     {
         if (lives > 1)
-        {            
+        {
+            thermometer.enabled = false;
             var go = (GameObject)Instantiate(transition);
-            go.GetComponent<TreeTransition>().wood = this;
+            var trans = go.GetComponent<TreeTransition>();
+            trans.wood = this;
+            trans.thermometer = thermometer;
             Destroy(go, 5.0f);
             enabled = false;
         }
