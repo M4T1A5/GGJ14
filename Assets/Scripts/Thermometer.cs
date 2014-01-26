@@ -30,7 +30,7 @@ public class Thermometer : MonoBehaviour
 	void Update ()
     {
         turnToHeat(heat);
-        Heat -= Time.deltaTime * heatDissipationSpeed *(1 + (Input.GetKey(KeyCode.Space) ? 1 : 0) * 10);
+        Heat -= Time.deltaTime * heatDissipationSpeed;// *(1 + (Input.GetKey(KeyCode.Space) ? 1 : 0) * 10);
 
         if (heat <= 20)
         {
