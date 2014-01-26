@@ -9,13 +9,13 @@ public class TreeFeller : MonoBehaviour
     public GUIText healthText;
 
     private float coolDownTimer = 0;
-    private Animation animation;
+    private Animation treeAnimation;
     private GameObject saunaContainer;
 
 	// Use this for initialization
 	void Start()
     {
-        animation = GetComponent<Animation>();
+        treeAnimation = GetComponent<Animation>();
         saunaContainer = OutOfWood.SaunaContainer;
 	}
 
@@ -23,7 +23,7 @@ public class TreeFeller : MonoBehaviour
     {
         coolDownTimer -= Time.deltaTime;
 
-        if (animation.clip.name == "TreeFell" && !animation.isPlaying)
+        if (treeAnimation.clip.name == "TreeFell" && !treeAnimation.isPlaying)
         {
             var go = GameObject.Find("PuunHakkausContainer");
             go.SetActive(false);
@@ -41,9 +41,9 @@ public class TreeFeller : MonoBehaviour
         {
             health -= damage;
             if (health <= 0)
-                animation.clip = animation.GetClip("TreeFell");
+                treeAnimation.clip = treeAnimation.GetClip("TreeFell");
 
-            animation.Play();
+            treeAnimation.Play();
             coolDownTimer = coolDownTime;
         }
     }

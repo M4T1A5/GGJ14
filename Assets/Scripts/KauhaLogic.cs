@@ -26,15 +26,11 @@ public class KauhaLogic : MonoBehaviour
     public GameObject kauha;
 
     private float wantedPitch;
-    private float currentPitch;
     private float wantedRoll;
     private float currentRoll;
     private float wantedVertical;
-    private float verticalMovement;
     private float wantedHorizontal;
-    private float horizontalMovement;
     private float wantedForward;
-    private float forwardMovement;
 
 
 
@@ -64,12 +60,6 @@ public class KauhaLogic : MonoBehaviour
         wantedVertical = transform.localPosition.y;
         wantedHorizontal = transform.localPosition.x;
         wantedForward = transform.localPosition.z;
-
-        verticalMovement = 0;
-        horizontalMovement = 0;
-        forwardMovement = 0;
-
-        currentPitch = 0;
         
 	}
 	
