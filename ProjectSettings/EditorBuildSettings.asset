@@ -8,6 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/menu.unity
   - enabled: 1
-    path: Assets/Scenes/testi.unity
+    path: Assets/Scenes/sauna.unity
   - enabled: 1
     path: Assets/Scenes/puunhakkuu.unity
