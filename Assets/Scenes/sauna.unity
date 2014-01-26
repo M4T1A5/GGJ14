@@ -348,6 +348,18 @@ Prefab:
       propertyPath: containerObject
       value: 
       objectReference: {fileID: 1760150751}
+    - target: {fileID: 400000, guid: ae0bb6dfcbb6d5e4f840024710816d98, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ae0bb6dfcbb6d5e4f840024710816d98, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ae0bb6dfcbb6d5e4f840024710816d98, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae0bb6dfcbb6d5e4f840024710816d98, type: 2}
   m_RootGameObject: {fileID: 848886806}
@@ -801,6 +813,90 @@ Prefab:
     - target: {fileID: 100000, guid: 70f73d50a60b0044bae815829346c60b, type: 2}
       propertyPath: m_Name
       value: Kauha
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 70f73d50a60b0044bae815829346c60b, type: 2}
+      propertyPath: attributes.pitch.baseValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 70f73d50a60b0044bae815829346c60b, type: 2}
+      propertyPath: attributes.yaw.baseValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 70f73d50a60b0044bae815829346c60b, type: 2}
+      propertyPath: attributes.roll.baseValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 70f73d50a60b0044bae815829346c60b, type: 2}
+      propertyPath: attributes.forward.baseValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 70f73d50a60b0044bae815829346c60b, type: 2}
+      propertyPath: attributes.vertical.baseValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 70f73d50a60b0044bae815829346c60b, type: 2}
+      propertyPath: attributes.pitch.speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 70f73d50a60b0044bae815829346c60b, type: 2}
+      propertyPath: attributes.yaw.speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 70f73d50a60b0044bae815829346c60b, type: 2}
+      propertyPath: attributes.roll.speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 70f73d50a60b0044bae815829346c60b, type: 2}
+      propertyPath: attributes.forward.speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 70f73d50a60b0044bae815829346c60b, type: 2}
+      propertyPath: attributes.vertical.speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 70f73d50a60b0044bae815829346c60b, type: 2}
+      propertyPath: attributes.pitch.min
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 70f73d50a60b0044bae815829346c60b, type: 2}
+      propertyPath: attributes.pitch.max
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 70f73d50a60b0044bae815829346c60b, type: 2}
+      propertyPath: attributes.roll.min
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 70f73d50a60b0044bae815829346c60b, type: 2}
+      propertyPath: attributes.roll.max
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 70f73d50a60b0044bae815829346c60b, type: 2}
+      propertyPath: attributes.forward.min
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 70f73d50a60b0044bae815829346c60b, type: 2}
+      propertyPath: attributes.forward.max
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 70f73d50a60b0044bae815829346c60b, type: 2}
+      propertyPath: attributes.vertical.min
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 70f73d50a60b0044bae815829346c60b, type: 2}
+      propertyPath: attributes.vertical.max
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 70f73d50a60b0044bae815829346c60b, type: 2}
+      propertyPath: attributes.horizontal.speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 70f73d50a60b0044bae815829346c60b, type: 2}
+      propertyPath: attributes.horizontal.min
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 70f73d50a60b0044bae815829346c60b, type: 2}
+      propertyPath: attributes.horizontal.max
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 70f73d50a60b0044bae815829346c60b, type: 2}
@@ -5677,11 +5773,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attributes:
-    pitch: 10
-    yaw: 10
-    roll: 10
-    forward: 10
-    vertical: 5
+    pitch:
+      speed: 10
+      min: -10
+      max: 10
+    horizontal:
+      speed: 10
+      min: -2
+      max: 3
+    roll:
+      speed: 10
+      min: -10
+      max: 10
+    forward:
+      speed: 10
+      min: -1
+      max: 3
+    vertical:
+      speed: 10
+      min: -5
+      max: 5
   kauha: {fileID: 172210392}
 --- !u!1 &1997308189
 GameObject:
