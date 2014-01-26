@@ -947,7 +947,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!132 &255998145
 GUIText:
   m_ObjectHideFlags: 0
@@ -5172,6 +5172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startHeat: 60
   heatDissipationSpeed: .300000012
+  youlose: {fileID: 100000, guid: 839725e65a9392048b48c8307a431b03, type: 2}
 --- !u!1 &1723641115
 GameObject:
   m_ObjectHideFlags: 0

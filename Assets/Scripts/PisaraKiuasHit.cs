@@ -29,6 +29,10 @@ public class PisaraKiuasHit : MonoBehaviour
 
             var steam = (GameObject)Instantiate(steamEmitter, other.transform.position, steamEmitter.transform.rotation);
             var tshhh = (GameObject)Instantiate(soundEmmitter, other.transform.position, soundEmmitter.transform.rotation);
+
+            steam.transform.parent = other.transform.parent;
+            tshhh.transform.parent = other.transform.parent;
+
             tshhh.GetComponent<AudioSource>().Play();
             Destroy(other.gameObject);
             Destroy(steam, 7.0f);
