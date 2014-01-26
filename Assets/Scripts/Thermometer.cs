@@ -26,7 +26,7 @@ public class Thermometer : MonoBehaviour
 	void Update ()
     {
         turnToHeat(heat);
-        heat -= Time.deltaTime * heatDissipationSpeed;
+        Heat -= Time.deltaTime * heatDissipationSpeed;
 	}
 
     void turnToHeat(float heat)
