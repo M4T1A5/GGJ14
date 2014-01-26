@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: EndGameGUI
+  m_Name: TreeTransition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,9 +35,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c744ca584176c1d4f8c43a031b3a9aba, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d6890501b5b60b4ab1c7d5818f17231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wood: {fileID: 0}
   skin: {fileID: 11400000, guid: 5ef78b0d65156df46a56e440892005d3, type: 2}
 --- !u!1001 &100100000
 Prefab:

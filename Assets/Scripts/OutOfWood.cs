@@ -3,20 +3,27 @@ using System.Collections;
 
 public class OutOfWood : MonoBehaviour
 {
-    public static GameObject SaunaContainer;
-	// Use this for initialization
-	void Start()
-    {
-        SaunaContainer = GameObject.Find("SaunaContainer");
-	}
+    public GameObject transition;
+    public GameObject youlose;
+
+    public int lives;
 	
-	// Update is called once per frame
-	void Update ()
+    public void HitSomeTrees(Thermometer thermometer)
     {
-        if (Input.GetKey(KeyCode.R))
-        {
-            Application.LoadLevelAdditive("puunhakkuu");
-            SaunaContainer.SetActive(false);
+        if (lives > 1)
+        {            
+            var go = (GameObject)Instantiate(transition);
+            go.GetComponent<TreeTransition>().wood = this;
+            Destroy(go, 5.0f);
+            enabled = false;
         }
-	}
+        else
+        {
+            thermometer.enabled = false;
+            var go = (GameObject)Instantiate(youlose);
+            Destroy(go, 5.0f);
+            enabled = false;
+        }
+        lives--;
+    }
 }

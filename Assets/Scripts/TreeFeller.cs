@@ -16,7 +16,7 @@ public class TreeFeller : MonoBehaviour
 	void Start()
     {
         treeAnimation = GetComponent<Animation>();
-        saunaContainer = OutOfWood.SaunaContainer;
+        saunaContainer = TreeTransition.SaunaContainer;
 	}
 
     void Update()

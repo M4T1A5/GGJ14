@@ -5,9 +5,10 @@ public class Thermometer : MonoBehaviour
 {
     public float startHeat;
     public float heatDissipationSpeed = 1;
+    public GameObject kiuas;
+    public GameObject youWin;
 
-    public GameObject youlose;
-
+    private OutOfWood wood;
     private float heat;
     public float Heat
     {
@@ -22,6 +23,7 @@ public class Thermometer : MonoBehaviour
     {
         startRotation = transform.rotation;
         heat = startHeat;
+        wood = kiuas.GetComponent<OutOfWood>();
 	}
 	
 	// Update is called once per frame
@@ -32,11 +34,14 @@ public class Thermometer : MonoBehaviour
 
         if (heat <= 20)
         {
-            var go = (GameObject)Instantiate(youlose);
+            wood.HitSomeTrees(this);
+        }
+        else if (heat >= 140)
+        {
+            var go = (GameObject)Instantiate(youWin);
             Destroy(go, 5.0f);
             enabled = false;
         }
-
 	}
 
     void turnToHeat(float heat)
