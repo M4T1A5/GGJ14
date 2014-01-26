@@ -4,7 +4,7 @@ using System.Collections;
 public class PisaraKiuasHit : MonoBehaviour
 {
     public GUIText score;
-    public ParticleSystem steamEmitter;
+    public GameObject steamEmitter;
     public GameObject soundEmmitter;
 
     public float heatGainSpeed = 1;
@@ -27,7 +27,7 @@ public class PisaraKiuasHit : MonoBehaviour
 
             thermometer.Heat += heatGainSpeed;
 
-            var steam = (ParticleSystem)Instantiate(steamEmitter, other.transform.position, steamEmitter.transform.rotation);
+            var steam = (GameObject)Instantiate(steamEmitter, other.transform.position, steamEmitter.transform.rotation);
             var tshhh = (GameObject)Instantiate(soundEmmitter, other.transform.position, soundEmmitter.transform.rotation);
             tshhh.GetComponent<AudioSource>().Play();
             Destroy(other.gameObject);
